@@ -16,6 +16,7 @@ public class ApiTest {
         .when()
             .get("/api/users")
         .then()
+            .log().body()
             .statusCode(200)
             .body("page", equalTo(2));
     }
